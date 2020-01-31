@@ -34,7 +34,7 @@ if 1:
     tf_config     = {'rnd.np_random_seed': 1000}                                           # Options for tflib.init_tf().
 
     # Dataset.
-    desc += '-ffhq';     dataset = EasyDict(tfrecord_dir='mnist');                 train.mirror_augment = True
+    desc += '-ffhq';     dataset = EasyDict(tfrecord_dir='gtsdb_all_32x32');                 train.mirror_augment = True
     #desc += '-ffhq512';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=512); train.mirror_augment = True
     #desc += '-ffhq256';  dataset = EasyDict(tfrecord_dir='ffhq', resolution=256); train.mirror_augment = True
     #desc += '-celebahq'; dataset = EasyDict(tfrecord_dir='celebahq');             train.mirror_augment = True
@@ -49,11 +49,11 @@ if 1:
     #desc += '-8gpu'; submit_config.num_gpus = 8; sched.minibatch_base = 32; sched.minibatch_dict = {4: 512, 8: 256, 16: 128, 32: 64, 64: 32}
 
     # Default options.
-    train.total_kimg = 3000
+    train.total_kimg = 4000
     sched.lod_initial_resolution = 8
     sched.G_lrate_dict = {32: 0.0015}
     sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
-
+d
     # WGAN-GP loss for CelebA-HQ.
     #desc += '-wgangp'; G_loss = EasyDict(func_name='training.loss.G_wgan'); D_loss = EasyDict(func_name='training.loss.D_wgan_gp'); sched.G_lrate_dict = {k: min(v, 0.002) for k, v in sched.G_lrate_dict.items()}; sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
 
