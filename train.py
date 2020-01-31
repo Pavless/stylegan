@@ -53,7 +53,7 @@ if 1:
     sched.lod_initial_resolution = 8
     sched.G_lrate_dict = {32: 0.0015}
     sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
-d
+
     # WGAN-GP loss for CelebA-HQ.
     #desc += '-wgangp'; G_loss = EasyDict(func_name='training.loss.G_wgan'); D_loss = EasyDict(func_name='training.loss.D_wgan_gp'); sched.G_lrate_dict = {k: min(v, 0.002) for k, v in sched.G_lrate_dict.items()}; sched.D_lrate_dict = EasyDict(sched.G_lrate_dict)
 
