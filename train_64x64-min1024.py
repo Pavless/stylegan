@@ -38,10 +38,10 @@ if 1:
 
     # Default options.
     train.total_kimg = 8000
-    train.network_snapshot_ticks = 5
-    train.resume_run_id = "00001"
-    train.resume_kimg = 4627.0
-    train.resume_time = 31819.0
+    train.network_snapshot_ticks = 3
+    train.resume_run_id = "00004"
+    train.resume_kimg = 5027.0
+    train.resume_time = 0.0
 
 #----------------------------------------------------------------------------
 # Main entry point for training.
