@@ -38,9 +38,9 @@ if 1:
 
     # Default options.
     train.total_kimg = 8000
-    train.network_snapshot_ticks = 3
-    train.resume_run_id = "00004"
-    train.resume_kimg = 5027.0
+    train.network_snapshot_ticks = 2
+    train.resume_run_id = "00007"
+    train.resume_kimg = 5747.0
     train.resume_time = 0.0
 
 #----------------------------------------------------------------------------
